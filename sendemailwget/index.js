@@ -24,15 +24,16 @@ module.exports = async function (context, req) {
   const mailOptions = {
     from: 'kffsande123@outlook.com',
     to: 'kffsande123@outlook.com',
-    subject:
-      'Order From ' + req.body.emailAddress + ' - ' + req.body.emailSubject,
-    text: req.body.emailBody,
-    html:
-      '<div><table><th><tr><th>Name</th><th>Quantity</th></tr></thead><tbody>' +
-      req.body.emailBody +
-      '<tr><td style="text-align:right; font-weight: bold;"><p></p>' +
-      req.body.orderTotal +
-      '</td></tr></tbody></table></div>',
+    subject: 'This is my subject',
+    text: 'This is my text'
+    //   'Order From ' + req.body.emailAddress + ' - ' + req.body.emailSubject,
+    // text: req.body.emailBody,
+    // html:
+    //   '<div><table><th><tr><th>Name</th><th>Quantity</th></tr></thead><tbody>' +
+    //   req.body.emailBody +
+    //   '<tr><td style="text-align:right; font-weight: bold;"><p></p>' +
+    //   req.body.orderTotal +
+    //   '</td></tr></tbody></table></div>',
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
